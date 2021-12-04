@@ -50,7 +50,7 @@ news_p
 
 
 # Visit URL
-url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
+url = 'https://spaceimages-mars.com'
 browser.visit(url)
 
 
@@ -77,7 +77,7 @@ img_url_rel
 
 
 # Use the base URL to create an absolute URL
-img_url = f'https://www.jpl.nasa.gov{img_url_rel}'
+img_url = f'https://spaceimages-mars.com/{img_url_rel}'
 img_url
 
 
@@ -87,8 +87,8 @@ img_url
 import pandas as pd
 
 
-df = pd.read_html('http://space-facts.com/mars/')[0]
-df.columns=['description', 'value']
+df = pd.read_html('https://galaxyfacts-mars.com')[0]
+df.columns=['description', 'Mars', 'Earth']
 df.set_index('description', inplace=True)
 df
 
